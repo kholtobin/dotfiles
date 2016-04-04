@@ -8,6 +8,7 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 "Plugin 'scrooloose/nerdtree.git'
 Plugin 'kien/ctrlp.vim.git'
+Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim.git'
