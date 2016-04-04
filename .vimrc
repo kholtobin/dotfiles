@@ -37,7 +37,7 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
-colorscheme desert
+colorscheme delek
 
 "set a custom modifier for key bindings - Ctrl
 let g:move_key_modifier = 'C'
