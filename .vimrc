@@ -14,12 +14,15 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim.git'
 Plugin 'matze/vim-move.git'
 Plugin 'itchyny/lightline.vim'
+Plugin 'kchmck/vim-coffee-script'
 
 " Now we can turn our filetype functionality back on
 filetype plugin indent on
 
 " Settings
 syntax enable
+filetype plugin indent on
+
 set number
 " Disables since this options makes vim too slow
 " set relativenumber
