@@ -15,6 +15,7 @@ Plugin 'mattn/gist-vim.git'
 Plugin 'matze/vim-move.git'
 Plugin 'itchyny/lightline.vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'slim-template/vim-slim.git'
 
 " Now we can turn our filetype functionality back on
 filetype plugin indent on
