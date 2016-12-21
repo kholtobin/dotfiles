@@ -1,12 +1,11 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Vundle plugins
-Plugin 'gmarik/vundle'
-"Plugin 'scrooloose/nerdtree.git'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-fugitive.git'
@@ -19,11 +18,11 @@ Plugin 'slim-template/vim-slim.git'
 Plugin 'ngmy/vim-rubocop'
 
 " Now we can turn our filetype functionality back on
+call vundle#end()
 filetype plugin indent on
 
 " Settings
 syntax enable
-filetype plugin indent on
 
 set number
 " Disables since this options makes vim too slow
