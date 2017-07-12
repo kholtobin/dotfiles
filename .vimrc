@@ -26,6 +26,7 @@ filetype plugin indent on
 syntax enable
 
 set number
+set relativenumber
 
 "nerdtree
 "autocmd StdinReadPre * let s:std_in=1
