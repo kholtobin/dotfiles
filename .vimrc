@@ -16,6 +16,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'lmeijvogel/vim-yaml-helper'
 
 " Now we can turn our filetype functionality back on
 call vundle#end()
@@ -25,8 +26,6 @@ filetype plugin indent on
 syntax enable
 
 set number
-" Disables since this options makes vim too slow
-" set relativenumber
 
 "nerdtree
 "autocmd StdinReadPre * let s:std_in=1
@@ -35,6 +34,9 @@ set number
 
 "highlight search result
 set hlsearch
+
+" enable auto display of path to node under cursor
+let g:vim_yaml_helper#auto_display_path = 1
 
 " lightline
 set laststatus=2
