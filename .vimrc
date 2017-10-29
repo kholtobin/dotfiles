@@ -13,10 +13,9 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim.git'
 Plugin 'matze/vim-move.git'
 Plugin 'itchyny/lightline.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'slim-template/vim-slim.git'
-Plugin 'ngmy/vim-rubocop'
 Plugin 'lmeijvogel/vim-yaml-helper'
+Plugin 'fxn/vim-monochrome'
+Plugin 'scrooloose/syntastic'
 
 " Now we can turn our filetype functionality back on
 call vundle#end()
@@ -45,7 +44,7 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
-colorscheme koehler
+colorscheme monochrome
 
 "set a custom modifier for key bindings - Ctrl
 let g:move_key_modifier = 'C'
@@ -72,3 +71,19 @@ set noswapfile
 " Search
 set ic " ignore case
 set incsearch " interactive
+
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
