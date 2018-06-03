@@ -17,6 +17,7 @@ Plugin 'lmeijvogel/vim-yaml-helper'
 " colorschemes
 Plugin 'fxn/vim-monochrome'
 Plugin 'rakr/vim-one'
+Plugin 'ngmy/vim-rubocop'
 
 " Now we can turn our filetype functionality back on
 call vundle#end()
@@ -26,7 +27,7 @@ filetype plugin indent on
 syntax enable
 
 set number
-set relativenumber
+" set relativenumber
 
 "nerdtree
 "autocmd StdinReadPre * let s:std_in=1
@@ -45,9 +46,11 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
+
 "colorscheme one-dark
 colorscheme one
 set background=dark
+"colorscheme desert
 
 "set a custom modifier for key bindings - Ctrl
 let g:move_key_modifier = 'C'
@@ -58,10 +61,6 @@ set expandtab
 
 "turn off breaking long lines
 set nowrap
-
-"display tabs and trailing spaces
-"set list
-"set listchars=tab:>-,trail:⋅,nbsp:⋅
 
 " Disables since this options makes vim too slow
 " set cursorline
