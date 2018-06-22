@@ -14,10 +14,12 @@ Plugin 'mattn/gist-vim.git'
 Plugin 'matze/vim-move.git'
 Plugin 'itchyny/lightline.vim'
 Plugin 'lmeijvogel/vim-yaml-helper'
+Plugin 'ngmy/vim-rubocop'
 " colorschemes
 Plugin 'fxn/vim-monochrome'
 Plugin 'rakr/vim-one'
-Plugin 'ngmy/vim-rubocop'
+Plugin 'joshdick/onedark.vim'
+Plugin 'cocopon/iceberg.vim'
 
 " Now we can turn our filetype functionality back on
 call vundle#end()
@@ -47,10 +49,8 @@ let g:lightline = {
       \ }
 
 
-"colorscheme one-dark
-colorscheme one
-set background=dark
-"colorscheme desert
+colorscheme onedark
+set colorcolumn=81,101
 
 "set a custom modifier for key bindings - Ctrl
 let g:move_key_modifier = 'C'
