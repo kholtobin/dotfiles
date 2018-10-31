@@ -19,6 +19,7 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'fxn/vim-monochrome'
 Plugin 'rakr/vim-one'
 Plugin 'joshdick/onedark.vim'
+Plugin 'henrik/vim-indexed-search'
 
 " Now we can turn our filetype functionality back on
 call vundle#end()
