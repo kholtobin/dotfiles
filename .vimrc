@@ -19,7 +19,6 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'fxn/vim-monochrome'
 Plugin 'rakr/vim-one'
 Plugin 'joshdick/onedark.vim'
-Plugin 'cocopon/iceberg.vim'
 
 " Now we can turn our filetype functionality back on
 call vundle#end()
@@ -49,7 +48,8 @@ let g:lightline = {
       \ }
 
 
-colorscheme onedark
+set background=dark
+colorscheme one
 set colorcolumn=81,101
 
 "set a custom modifier for key bindings - Ctrl
