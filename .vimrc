@@ -51,7 +51,7 @@ let g:lightline = {
 
 set background=dark
 colorscheme one
-set colorcolumn=81,101
+set colorcolumn=81,101,121
 
 "set a custom modifier for key bindings - Ctrl
 let g:move_key_modifier = 'C'
