@@ -86,3 +86,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+let mapleader = ' '
+nnoremap <Leader><Leader> <C-^>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>x :x<CR>
+nnoremap <leader>e :e<CR>
+nnoremap <leader>c ciw
+nnoremap <leader>r :RuboCop<CR>
