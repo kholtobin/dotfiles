@@ -11,7 +11,6 @@ Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim.git'
-Plugin 'matze/vim-move.git'
 Plugin 'itchyny/lightline.vim'
 Plugin 'lmeijvogel/vim-yaml-helper'
 Plugin 'ngmy/vim-rubocop'
@@ -52,9 +51,6 @@ let g:lightline = {
 set background=dark
 colorscheme gruvbox
 set colorcolumn=81,101,121
-
-"set a custom modifier for key bindings - Ctrl
-let g:move_key_modifier = 'C'
 
 set tabstop=2
 set shiftwidth=2
