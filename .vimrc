@@ -6,7 +6,6 @@ call vundle#begin()
 
 " Vundle plugins
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim.git'
 Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'mattn/webapi-vim'
@@ -14,6 +13,8 @@ Plugin 'mattn/gist-vim.git'
 Plugin 'itchyny/lightline.vim'
 Plugin 'lmeijvogel/vim-yaml-helper'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 " colorschemes
 Plugin 'morhetz/gruvbox'
 Plugin 'fxn/vim-monochrome'
@@ -47,6 +48,8 @@ set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
+
+nnoremap <C-p> :Files<CR>
 
 set background=dark
 colorscheme gruvbox
