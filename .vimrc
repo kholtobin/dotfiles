@@ -16,6 +16,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'lmeijvogel/vim-yaml-helper'
 Plugin 'ngmy/vim-rubocop'
 " colorschemes
+Plugin 'morhetz/gruvbox'
 Plugin 'fxn/vim-monochrome'
 Plugin 'rakr/vim-one'
 Plugin 'joshdick/onedark.vim'
@@ -48,9 +49,8 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
-
 set background=dark
-colorscheme one
+colorscheme gruvbox
 set colorcolumn=81,101,121
 
 "set a custom modifier for key bindings - Ctrl
