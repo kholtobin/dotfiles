@@ -52,6 +52,7 @@ let g:lightline = {
 nnoremap <C-p> :Files<CR>
 
 set background=dark
+let g:gruvbox_italic=1
 colorscheme gruvbox
 set colorcolumn=81,101,121
 
@@ -63,7 +64,7 @@ set expandtab
 set nowrap
 
 " Disables since this options makes vim too slow
-" set cursorline
+set cursorline
 
 " Disable swap file
 set nobackup
