@@ -51,9 +51,15 @@ let g:lightline = {
 
 nnoremap <C-p> :Files<CR>
 
+" set background=dark
+" let g:gruvbox_italic=1
+" colorscheme gruvbox
+
+set termguicolors
 set background=dark
-let g:gruvbox_italic=1
-colorscheme gruvbox
+let g:one_allow_italics = 1
+colorscheme one
+
 set colorcolumn=81,101,121
 
 set tabstop=2
