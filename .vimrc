@@ -15,12 +15,12 @@ Plugin 'lmeijvogel/vim-yaml-helper'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'henrik/vim-indexed-search'
 " colorschemes
 Plugin 'morhetz/gruvbox'
 Plugin 'fxn/vim-monochrome'
 Plugin 'rakr/vim-one'
 Plugin 'joshdick/onedark.vim'
-Plugin 'henrik/vim-indexed-search'
 
 " Now we can turn our filetype functionality back on
 call vundle#end()
@@ -31,11 +31,6 @@ syntax enable
 
 set number
 " set relativenumber
-
-"nerdtree
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"map <C-n> :NERDTreeToggle<CR>
 
 "highlight search result
 set hlsearch
@@ -49,8 +44,6 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
-nnoremap <C-p> :Files<CR>
-
 " set background=dark
 " let g:gruvbox_italic=1
 " colorscheme gruvbox
@@ -61,6 +54,7 @@ let g:one_allow_italics = 1
 colorscheme one
 
 set colorcolumn=81,101,121
+set cursorline
 
 set tabstop=2
 set shiftwidth=2
@@ -68,9 +62,6 @@ set expandtab
 
 "turn off breaking long lines
 set nowrap
-
-" Disables since this options makes vim too slow
-set cursorline
 
 " Disable swap file
 set nobackup
@@ -80,6 +71,8 @@ set noswapfile
 " Search
 set ic " ignore case
 set incsearch " interactive
+
+nnoremap <C-p> :Files<CR>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
