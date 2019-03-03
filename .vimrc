@@ -16,6 +16,7 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'henrik/vim-indexed-search'
+Plugin 'w0rp/ale'
 " colorschemes
 Plugin 'morhetz/gruvbox'
 Plugin 'fxn/vim-monochrome'
@@ -96,5 +97,5 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>e :e<CR>
-nnoremap <leader>c ciw
-nnoremap <leader>r :RuboCop<CR>
+nnoremap <leader>g :ALEGoToDefinition<CR>
+nnoremap <leader>f :ALEFindReferences<CR>
