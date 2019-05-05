@@ -17,6 +17,7 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'henrik/vim-indexed-search'
 Plugin 'w0rp/ale'
+Plugin '907th/vim-auto-save'
 " colorschemes
 Plugin 'morhetz/gruvbox'
 Plugin 'fxn/vim-monochrome'
@@ -73,13 +74,12 @@ set noswapfile
 set ic " ignore case
 set incsearch " interactive
 
+" fzf config
 nnoremap <C-p> :Files<CR>
 
-" Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+" vim-auto-save config
+let g:auto_save = 1 " enable AutoSave on Vim startup
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -99,3 +99,4 @@ nnoremap <leader>x :x<CR>
 nnoremap <leader>e :e<CR>
 nnoremap <leader>g :ALEGoToDefinition<CR>
 nnoremap <leader>f :ALEFindReferences<CR>
+nnoremap <leader>n :ALENext<CR>
