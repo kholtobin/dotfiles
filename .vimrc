@@ -55,6 +55,9 @@ set background=dark
 let g:one_allow_italics = 1
 colorscheme one
 
+" let g:monochrome_italic_comments = 1
+" colorscheme monochrome
+
 set colorcolumn=81,101,121
 set cursorline
 
