@@ -23,6 +23,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'fxn/vim-monochrome'
 Plugin 'rakr/vim-one'
 Plugin 'joshdick/onedark.vim'
+Plugin 'arcticicestudio/nord-vim'
 
 " Now we can turn our filetype functionality back on
 call vundle#end()
@@ -42,18 +43,21 @@ let g:vim_yaml_helper#auto_display_path = 1
 
 " lightline
 set laststatus=2
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
+let g:lightline = { 'colorscheme': 'nord' }
+
+set termguicolors
 
 " set background=dark
 " let g:gruvbox_italic=1
 " colorscheme gruvbox
 
-set termguicolors
-set background=dark
-let g:one_allow_italics = 1
-colorscheme one
+" set background=dark
+" let g:one_allow_italics = 1
+" colorscheme one
+
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+colorscheme nord
 
 " let g:monochrome_italic_comments = 1
 " colorscheme monochrome
@@ -100,6 +104,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>e :e<CR>
+
 nnoremap <leader>g :ALEGoToDefinition<CR>
 nnoremap <leader>f :ALEFindReferences<CR>
 nnoremap <leader>n :ALENext<CR>
