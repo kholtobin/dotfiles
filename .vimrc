@@ -1,33 +1,26 @@
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.nvim/plugged')
 
 " Vundle plugins
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-surround.git'
-Plugin 'tpope/vim-fugitive.git'
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim.git'
-Plugin 'itchyny/lightline.vim'
-Plugin 'lmeijvogel/vim-yaml-helper'
-Plugin 'ngmy/vim-rubocop'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
-Plugin 'henrik/vim-indexed-search'
-Plugin 'w0rp/ale'
-Plugin '907th/vim-auto-save'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'lmeijvogel/vim-yaml-helper'
+Plug 'ngmy/vim-rubocop'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'henrik/vim-indexed-search'
+Plug 'w0rp/ale'
+Plug '907th/vim-auto-save'
 " colorschemes
-Plugin 'morhetz/gruvbox'
-Plugin 'fxn/vim-monochrome'
-Plugin 'rakr/vim-one'
-Plugin 'joshdick/onedark.vim'
-Plugin 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
+Plug 'fxn/vim-monochrome'
+Plug 'rakr/vim-one'
+Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
 
-" Now we can turn our filetype functionality back on
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 " Settings
 syntax enable
