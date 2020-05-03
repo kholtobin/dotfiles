@@ -1,7 +1,7 @@
 ## Install
 ### Requirements
 ```sh
-sudo apt-get install fonts-powerline neovim tmux curl git tig bat
+sudo apt-get install fonts-powerline neovim tmux curl git tig bat fzf
 ```
 
 ### Clone and configure links
@@ -14,14 +14,13 @@ mv ~/.tmux.conf ~/.tmux.conf.backup_$(date +%s)
 
 # make links
 mkdir ~/.config/nvim
-ln -s ~/dotfiles/.vimrc ~/.config/nvim/init.vim
+ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
 
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ```
 
 ### [Neo]Vim
-Plugin manager
-https://github.com/junegunn/vim-plug#neovim
+- [Plugin manager](https://github.com/junegunn/vim-plug#neovim)
 
 ### Tmux
 - [Plugin manager](https://github.com/tmux-plugins/tpm)
