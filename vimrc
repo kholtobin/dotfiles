@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 
-" Vundle plugins
+" Plugins
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'mattn/webapi-vim'
@@ -11,7 +11,6 @@ Plug 'ngmy/vim-rubocop'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'henrik/vim-indexed-search'
-Plug 'w0rp/ale'
 Plug '907th/vim-auto-save'
 " colorschemes
 Plug 'morhetz/gruvbox'
@@ -97,7 +96,3 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>e :e<CR>
-
-nnoremap <leader>g :ALEGoToDefinition<CR>
-nnoremap <leader>f :ALEFindReferences<CR>
-nnoremap <leader>n :ALENext<CR>
