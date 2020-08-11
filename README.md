@@ -32,3 +32,32 @@ ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ### Tmux
 - [Plugin manager](https://github.com/tmux-plugins/tpm)
 - [Nord colorscheme](https://github.com/ivleonov/nord-tmux). Fork with few adjustments
+
+## In addition
+### Eliminate snap
+
+[Original source](https://www.kevin-custer.com/blog/disabling-snaps-in-ubuntu-20-04/)
+```sh
+# check list of snaps:
+snap list
+
+# Remove all snap packages except "core"
+sudo snap remove snap-store
+sudo snap remove gtk-common-themes
+sudo snap remove gnome-3-34-1804
+sudo snap remove core18
+
+# Unmount the snap core service
+df | grep '/snap/core/'
+# xxx - id from output
+sudo umount /snap/core/xxx
+
+# Remove and purge the snapd package
+sudo apt purge snapd
+
+# Remove any lingering snap directories
+rm -rf ~/snap
+sudo rm -rf /snap
+sudo rm -rf /var/snap
+sudo rm -rf /var/lib/snapd
+```
