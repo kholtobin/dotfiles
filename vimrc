@@ -12,6 +12,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'henrik/vim-indexed-search'
 Plug '907th/vim-auto-save'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'fxn/vim-monochrome'
@@ -32,6 +33,9 @@ set hlsearch
 
 " enable auto display of path to node under cursor
 let g:vim_yaml_helper#auto_display_path = 1
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 " lightline
 set laststatus=2
