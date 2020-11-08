@@ -5,6 +5,7 @@ sudo apt-get -y install fonts-powerline make neovim tmux tmate curl git tig fzf 
 ```
 
 ### Other Software
+- [Alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md)
 - [VS Code](https://code.visualstudio.com/Download)
 - [bat](https://github.com/sharkdp/bat#on-ubuntu-using-most-recent-deb-packages)
 - [GitHub CLI](https://cli.github.com/manual/installation), [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#ubuntu-debian-apt-get)
@@ -15,11 +16,14 @@ sudo apt-get -y install fonts-powerline make neovim tmux tmate curl git tig fzf 
 ```sh
 git clone git@github.com:ivleonov/dotfiles.git ~/dotfiles
 
-# backup old configs
+# backup old configs (if needed)
 mv ~/.config/nvim/init.vim ~/.config/nvim/init.vim.backup_$(date +%s)
 mv ~/.tmux.conf ~/.tmux.conf.backup_$(date +%s)
 
 # make links
+mkdir ~/.config/alacritty
+ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+
 mkdir ~/.config/nvim
 ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
 
