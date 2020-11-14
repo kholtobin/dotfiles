@@ -14,10 +14,8 @@ Plug 'henrik/vim-indexed-search'
 Plug '907th/vim-auto-save'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " colorschemes
-Plug 'morhetz/gruvbox'
 Plug 'fxn/vim-monochrome'
 Plug 'rakr/vim-one'
-Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
