@@ -14,7 +14,7 @@ Plug 'henrik/vim-indexed-search'
 Plug '907th/vim-auto-save'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " colorschemes
-Plug 'fxn/vim-monochrome'
+Plug 'ivleonov/vim-monochrome'
 Plug 'rakr/vim-one'
 Plug 'arcticicestudio/nord-vim'
 
@@ -49,12 +49,12 @@ set termguicolors
 " let g:one_allow_italics = 1
 " colorscheme one
 
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
-colorscheme nord
+" let g:nord_italic = 1
+" let g:nord_italic_comments = 1
+" colorscheme nord
 
-" let g:monochrome_italic_comments = 1
-" colorscheme monochrome
+let g:monochrome_italic_comments = 1
+colorscheme monochrome
 
 set colorcolumn=81,101,121
 set cursorline
