@@ -42,19 +42,15 @@ let g:lightline = { 'colorscheme': 'nord' }
 set termguicolors
 
 " set background=dark
-" let g:gruvbox_italic=1
-" colorscheme gruvbox
-
-" set background=dark
 " let g:one_allow_italics = 1
 " colorscheme one
 
-" let g:nord_italic = 1
-" let g:nord_italic_comments = 1
-" colorscheme nord
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+colorscheme nord
 
-let g:monochrome_italic_comments = 1
-colorscheme monochrome
+" let g:monochrome_italic_comments = 1
+" colorscheme monochrome
 
 set colorcolumn=81,101,121
 set cursorline
