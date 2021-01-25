@@ -95,3 +95,5 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>e :e<CR>
 nnoremap <leader>ag :Ag <C-R><C-W><CR>
+
+command -range=% FormatJSON <line1>,<line2>!jq '.'

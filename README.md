@@ -1,7 +1,7 @@
 ## Install
 ### Requirements
 ```sh
-sudo apt-get -y install fonts-powerline make neovim tmux tmate curl git tig fzf mc htop silversearcher-ag ripgrep
+sudo apt-get -y install fonts-powerline make neovim tmux tmate curl git tig fzf mc htop silversearcher-ag ripgrep jq
 ```
 
 ### Other Software
