@@ -11,6 +11,8 @@ sudo dnf install --assumeyes alacritty \
                              mc \
                              neovim \
                              nodejs \
+                             openssl-devel \
+                             zlib-devel \
                              perl-App-cpanminus \
                              starship \
                              the_silver_searcher \
