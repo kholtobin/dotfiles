@@ -18,6 +18,10 @@ sudo dnf install --assumeyes alacritty \
 
 git clone git@github.com:ivleonov/dotfiles.git ~/dotfiles
 
+# Install npm packages globally without sudo
+mkdir "${HOME}/.npm-packages"
+npm config set prefix "${HOME}/.npm-packages"
+
 echo 'Installing rbenv'
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 cd ~/.rbenv && src/configure && make -C src
@@ -28,11 +32,8 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 rbenv install 3.0.2
 rbenv global 3.0.2
 source ~/dotfiles/bashrc
+source ~/dotfiles/bash_profile
 gem install neovim
-
-# Install npm packages globally without sudo
-mkdir "${HOME}/.npm-packages"
-npm config set prefix "${HOME}/.npm-packages"
 
 # Installing NEOVIM dependencies
 echo 'Installing NEOVIM dependencies'
