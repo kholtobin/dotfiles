@@ -27,12 +27,12 @@ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 cd ~/.rbenv && src/configure && make -C src
 cd -
 ~/.rbenv/bin/rbenv init
+source ~/dotfiles/bashrc
+source ~/dotfiles/bash_profile
 mkdir -p ~/.rbenv/plugins
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 rbenv install 3.0.2
 rbenv global 3.0.2
-source ~/dotfiles/bashrc
-source ~/dotfiles/bash_profile
 gem install neovim
 
 # Installing NEOVIM dependencies
