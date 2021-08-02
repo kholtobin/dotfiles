@@ -17,6 +17,9 @@ npm install -g neovim
 /usr/bin/python3 -m pip install pynvim
 
 echo 'Installing Plug (NEOVIM package manager)'
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 nvim +PlugInstall +:qa!
+
+# TMUX plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
