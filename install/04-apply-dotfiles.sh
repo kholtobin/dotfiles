@@ -6,6 +6,12 @@ ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
 
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
+mv ~/.bashrc ~/.bashrc.backup
+ln -s ~/dotfiles/bashrc ~/.bashrc
+
+mv ~/.bash_profile ~/.bash_profile.backup
+ln -s ~/dotfiles/bash_profile ~/.bash_profile
+
 # Install npm packages globally without sudo
 mkdir ~/.npm-packages
 npm config set prefix ~/.npm-packages
