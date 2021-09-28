@@ -46,6 +46,10 @@ require('packer').startup(function()
   use 'arcticicestudio/nord-vim'
   use '907th/vim-auto-save'
   use 'itchyny/lightline.vim'
+
+  -- use 'dbeniamine/cheat.sh-vim'
+  use 'RishabhRD/popfix'
+  use 'RishabhRD/nvim-cheat.sh'
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }

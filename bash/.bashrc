@@ -35,3 +35,8 @@ eval "$(starship init bash)"
 
 # Enable Nord theme for bat
 export BAT_THEME="Nord"
+
+# Command for searching ruby stuff in cheat.sh
+function rcheat {
+  curl "cheat.sh/ruby/$(echo $@ | tr ' ' '+')"
+}
