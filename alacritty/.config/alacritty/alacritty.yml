@@ -20,6 +20,7 @@ font:
     style: Bold
   italic:
     family: hack
+    style: Italic
   bold_italic:
     family: hack
 
