@@ -1,6 +1,5 @@
 -- Settings
 vim.opt.number = true
--- set relativenumber
 vim.opt.termguicolors = true
 
 --highlight search result
@@ -28,13 +27,6 @@ vim.opt.incsearch = true -- interactive
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
--- -- Use deoplete.
--- let g:deoplete#enable_at_startup = 1
--- 
--- -- lightline
--- set laststatus=2
--- let g:lightline = { 'colorscheme': 'nord' }
-
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
@@ -46,6 +38,9 @@ require('packer').startup(function()
   use 'arcticicestudio/nord-vim'
   use '907th/vim-auto-save'
   use 'itchyny/lightline.vim'
+
+  use 'tpope/vim-surround'
+  use 'tpope/vim-fugitive'
 
   -- use 'dbeniamine/cheat.sh-vim'
   use 'RishabhRD/popfix'
@@ -77,7 +72,7 @@ vim.cmd [[
   command! -range=% FormatJSON <line1>,<line2>!jq '.'
 ]]
 
-vim.api.nvim_set_keymap('n', '<C-p>', ':Files<CR>', {})
+vim.api.nvim_set_keymap('n', '<C-p>', ':GFiles<CR>', {})
 
 -- Quicker window movement
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {})
@@ -90,6 +85,7 @@ vim.api.nvim_set_keymap('n', '<Leader><Leader>', '<C-^>', {})
 vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>e', ':e<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>ag', ':Ag <C-R><C-W><CR>', {})
+vim.api.nvim_set_keymap('n', '<leader>/', ':BLines<CR>', {})
 
 vim.api.nvim_set_keymap('n', 'n', 'nzz', {noremap = true})
 vim.api.nvim_set_keymap('n', 'N', 'Nzz', {noremap = true})

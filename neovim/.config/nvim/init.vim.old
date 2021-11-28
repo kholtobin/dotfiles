@@ -72,7 +72,7 @@ set ic " ignore case
 set incsearch " interactive
 
 " fzf config
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :GFiles<CR>
 
 " vim-auto-save config
 let g:auto_save = 1 " enable AutoSave on Vim startup
@@ -94,6 +94,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>e :e<CR>
+nnoremap <leader>/ :BLines<CR>
 nnoremap <leader>ag :Ag <C-R><C-W><CR>
 
 command -range=% FormatJSON <line1>,<line2>!jq '.'
