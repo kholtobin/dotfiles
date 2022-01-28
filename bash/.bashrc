@@ -36,6 +36,17 @@ eval "$(starship init bash)"
 # Enable Nord theme for bat
 export BAT_THEME="Nord"
 
+# Disabling DRI3 to fix issue wit external monitor:
+# When disabling primary display (on the laptop) and using only external one
+# the anymation is crazy lagging (like 1 FPS)
+# More info here:
+# - https://github.com/DisplayLink/evdi/issues/181
+# - https://gitlab.freedesktop.org/xorg/xserver/-/issues/1028#note_1067790
+#
+# Side-effect: when disabled - alacritty is lagging:
+# doesn't show recently typed symbol (exactly the last one)
+# export LIBGL_DRI3_DISABLE="true"
+
 # Command for searching ruby stuff in cheat.sh
 function rcheat {
   curl "cheat.sh/ruby/$(echo $@ | tr ' ' '+')"
