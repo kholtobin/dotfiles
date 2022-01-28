@@ -45,10 +45,6 @@ require('packer').startup(function()
   -- use 'dbeniamine/cheat.sh-vim'
   use 'RishabhRD/popfix'
   use 'RishabhRD/nvim-cheat.sh'
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
 end)
 
 -- lightline
