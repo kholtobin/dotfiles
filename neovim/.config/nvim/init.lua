@@ -33,7 +33,7 @@ require('packer').startup(function()
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
 
-  use 'ivleonov/vim-monochrome'
+  use 'fxn/vim-monochrome'
   use 'rakr/vim-one'
   use 'arcticicestudio/nord-vim'
   use '907th/vim-auto-save'
