@@ -48,6 +48,13 @@ require('packer').startup(function()
 
   use 'tree-sitter/tree-sitter'
   use 'nvim-treesitter/nvim-treesitter'
+
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 end)
 
 require('nvim-treesitter.configs').setup {
@@ -65,6 +72,23 @@ require('nvim-treesitter.configs').setup {
   --   enable = true
   -- }
 }
+
+require('telescope').setup {
+  extensions = {
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    },
+    fzf_native = {
+      override_generic_sorter = false,
+      override_file_sorter = true,
+    }
+  }
+}
+require('telescope').load_extension('fzf')
 
 -- lightline
 vim.opt.laststatus=2
@@ -101,6 +125,8 @@ vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>e', ':e<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>ag', ':Ag <C-R><C-W><CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>/', ':BLines<CR>', {})
+
+vim.api.nvim_set_keymap('n', '<leader>p', ':Telescope git_files<CR>', {})
 
 vim.api.nvim_set_keymap('n', 'n', 'nzz', {noremap = true})
 vim.api.nvim_set_keymap('n', 'N', 'Nzz', {noremap = true})
