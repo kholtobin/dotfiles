@@ -35,7 +35,7 @@ require('packer').startup(function()
 
   use 'fxn/vim-monochrome'
   use 'rakr/vim-one'
-  use 'arcticicestudio/nord-vim'
+  use 'shaunsingh/nord.nvim'
   use '907th/vim-auto-save'
   use 'itchyny/lightline.vim'
 
@@ -45,7 +45,26 @@ require('packer').startup(function()
   -- use 'dbeniamine/cheat.sh-vim'
   use 'RishabhRD/popfix'
   use 'RishabhRD/nvim-cheat.sh'
+
+  use 'tree-sitter/tree-sitter'
+  use 'nvim-treesitter/nvim-treesitter'
 end)
+
+require('nvim-treesitter.configs').setup {
+    -- A list of parser names, or "all"
+  ensure_installed = { "ruby" },
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  }
+  -- indent = {
+  --   enable = true
+  -- }
+}
 
 -- lightline
 vim.opt.laststatus=2
