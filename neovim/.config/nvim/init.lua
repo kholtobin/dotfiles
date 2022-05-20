@@ -37,7 +37,10 @@ require('packer').startup(function()
   use 'rakr/vim-one'
   use 'shaunsingh/nord.nvim'
   use '907th/vim-auto-save'
-  use 'itchyny/lightline.vim'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   use 'tpope/vim-surround'
   use 'tpope/vim-fugitive'
@@ -56,6 +59,8 @@ require('packer').startup(function()
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 end)
+
+require('lualine').setup()
 
 require('nvim-treesitter.configs').setup {
     -- A list of parser names, or "all"
@@ -89,10 +94,6 @@ require('telescope').setup {
   }
 }
 require('telescope').load_extension('fzf')
-
--- lightline
-vim.opt.laststatus=2
-vim.cmd [[let g:lightline = { 'colorscheme': 'nord' }]]
 
 vim.cmd [[
   colorscheme nord
