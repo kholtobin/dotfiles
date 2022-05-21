@@ -27,6 +27,9 @@ sudo dnf group upgrade --with-optional Multimedia
 - [Slack](https://slack.com/intl/en-ua/downloads/linux)
 
 ### Font
+[Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
+
+#### Another options:
 [Hack](https://sourcefoundry.org/hack/)
 
 ### Clone and configure links
@@ -43,8 +46,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
 ```
 
 ### Tmux
-- [Plugin manager](https://github.com/tmux-plugins/tpm)
-  ```sh
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-  ```
-- [Nord colorscheme](https://github.com/ivleonov/nord-tmux). Fork with few adjustments
+[Plugin manager](https://github.com/tmux-plugins/tpm)
+```sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
