@@ -36,6 +36,8 @@ eval "$(starship init bash)"
 # Enable Nord theme for bat
 export BAT_THEME="Nord"
 
+export EDITOR=nvim
+
 # Disabling DRI3 to fix issue wit external monitor:
 # When disabling primary display (on the laptop) and using only external one
 # the anymation is crazy lagging (like 1 FPS)
