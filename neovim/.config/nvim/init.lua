@@ -2,6 +2,7 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.termguicolors = true
+vim.opt.spell = true
 
 --highlight search result
 vim.opt.hlsearch = true
@@ -61,6 +62,7 @@ require('packer').startup(function()
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   use { 'voldikss/vim-translator' }
+  use { 'lewis6991/spellsitter.nvim' }
 end)
 
 -- config colorscheme ------------------
@@ -74,9 +76,13 @@ require('nord').set()
 
 require('lualine').setup()
 
+require('spellsitter').setup {
+  enable = true
+}
+
 require('nvim-treesitter.configs').setup {
     -- A list of parser names, or "all"
-  ensure_installed = { "ruby" },
+  ensure_installed = { "ruby", "yaml", "lua", "javascript", "python" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -117,9 +123,7 @@ vim.cmd [[
 ]]
 
 -- TODO: Look / Wait for native way
-vim.cmd [[
-  command! -range=% FormatJSON <line1>,<line2>!jq '.'
-]]
+vim.cmd [[command! -range=% FormatJSON <line1>,<line2>!jq '.']]
 
 -- Quicker window movement
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {})
