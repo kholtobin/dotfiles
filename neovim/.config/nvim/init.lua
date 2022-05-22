@@ -1,5 +1,6 @@
 -- Settings
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.termguicolors = true
 
 --highlight search result
@@ -120,8 +121,6 @@ vim.cmd [[
   command! -range=% FormatJSON <line1>,<line2>!jq '.'
 ]]
 
-vim.api.nvim_set_keymap('n', '<C-p>', ':GFiles<CR>', {})
-
 -- Quicker window movement
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {})
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {})
@@ -133,9 +132,12 @@ vim.api.nvim_set_keymap('n', '<Leader><Leader>', '<C-^>', {})
 vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>e', ':e<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>ag', ':Ag <C-R><C-W><CR>', {})
-vim.api.nvim_set_keymap('n', '<leader>/', ':BLines<CR>', {})
+vim.api.nvim_set_keymap('n', '<leader>/', ':Telescope current_buffer_fuzzy_find<CR>', {})
+-- Search for word under cursor in current dir using exact match
+vim.api.nvim_set_keymap('n', '<leader>*', ':Telescope grep_string word_match=-w search=<C-R><C-W><CR>', {})
 
 vim.api.nvim_set_keymap('n', '<leader>p', ':Telescope git_files<CR>', {})
+vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope git_files<CR>', {})
 
 vim.api.nvim_set_keymap('n', 'n', 'nzz', {noremap = true})
 vim.api.nvim_set_keymap('n', 'N', 'Nzz', {noremap = true})
