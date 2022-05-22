@@ -36,7 +36,7 @@ sudo dnf group upgrade --with-optional Multimedia
 ```sh
 git clone git@github.com:ivleonov/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-stow --verbose=2 alacritty bash neovim tmux
+stow --verbose=2 alacritty bash neovim tmux vscode
 ```
 
 ### [Neo]Vim
