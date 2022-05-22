@@ -58,6 +58,8 @@ require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+  use { 'voldikss/vim-translator' }
 end)
 
 require('lualine').setup()
@@ -94,6 +96,9 @@ require('telescope').setup {
   }
 }
 require('telescope').load_extension('fzf')
+
+-- Set Ukrainian as a target translate language for 'voldikss/vim-translator'
+vim.g.translator_target_lang="uk"
 
 vim.cmd [[
   colorscheme nord
