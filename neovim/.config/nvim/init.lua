@@ -6,7 +6,7 @@ vim.opt.spell = true
 
 --highlight search result
 vim.opt.hlsearch = true
-vim.opt.colorcolumn = '81,101,121'
+vim.opt.colorcolumn = "81,101,121"
 vim.opt.cursorline = true
 
 vim.opt.tabstop = 2
@@ -29,39 +29,33 @@ vim.opt.incsearch = true -- interactive
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
-require('packer').startup(function()
-  use 'wbthomason/packer.nvim'
+require("packer").startup(function()
+  use { "wbthomason/packer.nvim" }
 
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
-
-  use 'fxn/vim-monochrome'
-  use 'rakr/vim-one'
-  use 'shaunsingh/nord.nvim'
-  use { 'Pocco81/AutoSave.nvim' }
+  use { "fxn/vim-monochrome" }
+  use { "rakr/vim-one" }
+  use { "shaunsingh/nord.nvim" }
+  use { "Pocco81/AutoSave.nvim" }
   use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    "nvim-lualine/lualine.nvim",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true }
   }
 
-  use 'tpope/vim-surround'
-  use 'tpope/vim-fugitive'
+  use { "tpope/vim-surround" }
+  use { "tpope/vim-fugitive" }
 
-  use 'RishabhRD/popfix'
-  use 'RishabhRD/nvim-cheat.sh'
-
-  use 'tree-sitter/tree-sitter'
-  use 'nvim-treesitter/nvim-treesitter'
+  use { "tree-sitter/tree-sitter" }
+  use { "nvim-treesitter/nvim-treesitter" }
 
   -- Telescope
   use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    "nvim-telescope/telescope.nvim",
+    requires = { {"nvim-lua/plenary.nvim"} }
   }
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use {"nvim-telescope/telescope-fzf-native.nvim", run = "make" }
 
-  use { 'voldikss/vim-translator' }
-  use { 'lewis6991/spellsitter.nvim' }
+  use { "voldikss/vim-translator" }
+  use { "lewis6991/spellsitter.nvim" }
 end)
 
 -- config colorscheme ------------------
@@ -70,16 +64,16 @@ vim.g.nord_borders = true
 vim.g.nord_disable_background = false
 vim.g.nord_cursorline_transparent = false
 vim.g.nord_italic = true
-require('nord').set()
+require("nord").set()
 -----------------------------------------
 
-require('lualine').setup()
+require("lualine").setup()
 
-require('spellsitter').setup {
+require("spellsitter").setup {
   enable = true
 }
 
-require('nvim-treesitter.configs').setup {
+require("nvim-treesitter.configs").setup {
     -- A list of parser names, or "all"
   ensure_installed = { "ruby", "yaml", "lua", "javascript", "python" },
 
@@ -88,31 +82,31 @@ require('nvim-treesitter.configs').setup {
 
   highlight = {
     enable = true,
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = false
   }
   -- indent = {
   --   enable = true
   -- }
 }
 
-require('telescope').setup {
+require("telescope").setup {
   extensions = {
     fzf = {
       fuzzy = true,                    -- false will only do exact matching
       override_generic_sorter = true,  -- override the generic sorter
       override_file_sorter = true,     -- override the file sorter
-      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+      case_mode = "smart_case"        -- or "ignore_case" or "respect_case"
                                        -- the default case_mode is "smart_case"
     },
     fzf_native = {
       override_generic_sorter = false,
-      override_file_sorter = true,
+      override_file_sorter = true
     }
   }
 }
-require('telescope').load_extension('fzf')
+require("telescope").load_extension("fzf")
 
--- Set Ukrainian as a target translate language for 'voldikss/vim-translator'
+-- Set Ukrainian as a target translate language for "voldikss/vim-translator"
 vim.g.translator_target_lang="uk"
 
 require("autosave").setup {
@@ -132,28 +126,28 @@ require("autosave").setup {
 }
 
 -- TODO: Look / Wait for native way
-vim.cmd [[command! -range=% FormatJSON <line1>,<line2>!jq '.']]
+vim.cmd [[command! -range=% FormatJSON <line1>,<line2>!jq "."]]
 
 -- Quicker window movement
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {})
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {})
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {})
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {})
+vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", {})
+vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", {})
+vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", {})
+vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", {})
 
-vim.g.mapleader = ' '
-vim.api.nvim_set_keymap('n', '<Leader><Leader>', '<C-^>', {})
-vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {})
-vim.api.nvim_set_keymap('n', '<leader>e', ':e<CR>', {})
-vim.api.nvim_set_keymap('n', '<leader>ag', ':Ag <C-R><C-W><CR>', {})
-vim.api.nvim_set_keymap('n', '<leader>/', ':Telescope current_buffer_fuzzy_find<CR>', {})
+vim.g.mapleader = " "
+vim.api.nvim_set_keymap("n", "<Leader><Leader>", "<C-^>", {})
+vim.api.nvim_set_keymap("n", "<leader>q", ":q<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>e", ":e<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>ag", ":Ag <C-R><C-W><CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>/", ":Telescope current_buffer_fuzzy_find<CR>", {})
 -- Search for word under cursor in current dir using exact match
-vim.api.nvim_set_keymap('n', '<leader>*', ':Telescope grep_string word_match=-w search=<C-R><C-W><CR>', {})
+vim.api.nvim_set_keymap("n", "<leader>*", ":Telescope grep_string word_match=-w search=<C-R><C-W><CR>", {})
 
-vim.api.nvim_set_keymap('n', '<leader>p', ':Telescope git_files<CR>', {})
-vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope git_files<CR>', {})
+vim.api.nvim_set_keymap("n", "<leader>p", ":Telescope git_files<CR>", {})
+vim.api.nvim_set_keymap("n", "<C-p>", ":Telescope git_files<CR>", {})
 
-vim.api.nvim_set_keymap('n', 'n', 'nzz', {noremap = true})
-vim.api.nvim_set_keymap('n', 'N', 'Nzz', {noremap = true})
-vim.api.nvim_set_keymap('n', '*', '*zz', {noremap = true})
-vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', '<C-i>', '<C-i>zz', {noremap = true})
+vim.api.nvim_set_keymap("n", "n", "nzz", {noremap = true})
+vim.api.nvim_set_keymap("n", "N", "Nzz", {noremap = true})
+vim.api.nvim_set_keymap("n", "*", "*zz", {noremap = true})
+vim.api.nvim_set_keymap("n", "<C-o>", "<C-o>zz", {noremap = true})
+vim.api.nvim_set_keymap("n", "<C-i>", "<C-i>zz", {noremap = true})
