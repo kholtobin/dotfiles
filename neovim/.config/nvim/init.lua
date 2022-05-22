@@ -38,7 +38,7 @@ require('packer').startup(function()
   use 'fxn/vim-monochrome'
   use 'rakr/vim-one'
   use 'shaunsingh/nord.nvim'
-  use '907th/vim-auto-save'
+  use { 'Pocco81/AutoSave.nvim' }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -47,7 +47,6 @@ require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'tpope/vim-fugitive'
 
-  -- use 'dbeniamine/cheat.sh-vim'
   use 'RishabhRD/popfix'
   use 'RishabhRD/nvim-cheat.sh'
 
@@ -116,11 +115,21 @@ require('telescope').load_extension('fzf')
 -- Set Ukrainian as a target translate language for 'voldikss/vim-translator'
 vim.g.translator_target_lang="uk"
 
--- vim-auto-save config
-vim.cmd [[
-  let g:auto_save = 1 " enable AutoSave on Vim startup
-  let g:auto_save_events = ["InsertLeave", "TextChanged"]
-]]
+require("autosave").setup {
+  enabled = true,
+  execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
+  events = {"InsertLeave", "TextChanged"},
+  conditions = {
+    exists = true,
+    filename_is_not = {},
+    filetype_is_not = {},
+    modifiable = true
+  },
+  write_all_buffers = false,
+  on_off_commands = true,
+  clean_command_line_interval = 0,
+  debounce_delay = 135
+}
 
 -- TODO: Look / Wait for native way
 vim.cmd [[command! -range=% FormatJSON <line1>,<line2>!jq '.']]
