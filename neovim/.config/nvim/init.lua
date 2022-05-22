@@ -62,6 +62,15 @@ require('packer').startup(function()
   use { 'voldikss/vim-translator' }
 end)
 
+-- config colorscheme ------------------
+vim.g.nord_contrast = true
+vim.g.nord_borders = true
+vim.g.nord_disable_background = false
+vim.g.nord_cursorline_transparent = false
+vim.g.nord_italic = true
+require('nord').set()
+-----------------------------------------
+
 require('lualine').setup()
 
 require('nvim-treesitter.configs').setup {
@@ -99,12 +108,6 @@ require('telescope').load_extension('fzf')
 
 -- Set Ukrainian as a target translate language for 'voldikss/vim-translator'
 vim.g.translator_target_lang="uk"
-
-vim.cmd [[
-  colorscheme nord
-  let g:nord_italic = 1
-  let g:nord_italic_comments = 1
-]]
 
 -- vim-auto-save config
 vim.cmd [[
