@@ -33,7 +33,6 @@ require("packer").startup(function()
   use { "wbthomason/packer.nvim" }
 
   use { "fxn/vim-monochrome" }
-  use { "rakr/vim-one" }
   use { "shaunsingh/nord.nvim" }
   use { "Pocco81/AutoSave.nvim" }
   use {
@@ -56,7 +55,14 @@ require("packer").startup(function()
 
   use { "voldikss/vim-translator" }
   use { "lewis6991/spellsitter.nvim" }
+
+  -- EXPERIMENTING
+  use { 'beauwilliams/focus.nvim' }
 end)
+
+require("focus").setup({
+  number = false
+})
 
 -- config colorscheme ------------------
 vim.g.nord_contrast = true
