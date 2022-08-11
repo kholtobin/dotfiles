@@ -115,20 +115,31 @@ require("telescope").load_extension("fzf")
 -- Set Ukrainian as a target translate language for "voldikss/vim-translator"
 vim.g.translator_target_lang="uk"
 
-require("autosave").setup {
-  enabled = true,
-  execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
-  events = {"InsertLeave", "TextChanged"},
-  conditions = {
-    exists = true,
-    filename_is_not = {},
-    filetype_is_not = {},
-    modifiable = true
+require("auto-save").setup {
+  enabled = true, -- start auto-save when the plugin is loaded (i.e. when your package manager loads it)
+  execution_message = {
+    message = function() -- message to print on save
+      return ("AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"))
+    end,
+    dim = 0.18, -- dim the color of `message`
+    cleaning_interval = 1250, -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
   },
-  write_all_buffers = false,
-  on_off_commands = true,
-  clean_command_line_interval = 0,
-  debounce_delay = 135
+  trigger_events = {"InsertLeave", "TextChanged"}, -- vim events that trigger auto-save. See :h events
+  -- function that determines whether to save the current buffer or not
+  -- return true: if buffer is ok to be saved
+  -- return false: if it's not ok to be saved
+  condition = function(buf)
+    local fn = vim.fn
+    local utils = require("auto-save.utils.data")
+
+    if
+      fn.getbufvar(buf, "&modifiable") == 1 and
+      utils.not_in(fn.getbufvar(buf, "&filetype"), {}) then
+      return true -- met condition(s), can save
+    end
+    return false -- can't save
+  end,
+  debounce_delay = 135 -- saves the file at most every `debounce_delay` milliseconds
 }
 
 -- TODO: Look / Wait for native way
