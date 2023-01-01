@@ -1,7 +1,7 @@
 ## Install
 ### Requirements
 ```sh
-sudo dnf install -y alacritty bat curl fzf git tig htop jq make mc neovim nodejs openssl-devel zlib-devel perl-App-cpanminus starship the_silver_searcher tmux stow fd-find tree-sitter-cli httpie
+sudo dnf install -y alacritty bat curl fzf git tig htop jq make mc neovim nodejs openssl-devel zlib-devel perl-App-cpanminus starship the_silver_searcher tmux stow fd-find tree-sitter-cli httpie libyaml-devel
 ```
 
 ### Install flatpak applications
