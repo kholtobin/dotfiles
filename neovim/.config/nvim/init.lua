@@ -64,6 +64,9 @@ require("packer").startup(function()
   -- EXPERIMENTING
   use { 'beauwilliams/focus.nvim' }
   use { "phaazon/hop.nvim", branch = "v2" }
+
+  -- Add NERDTree plugin
+  use 'preservim/nerdtree'
 end)
 
 require("hop").setup({
@@ -168,3 +171,12 @@ vim.api.nvim_set_keymap("n", "<leader>p", ":Telescope git_files<CR>", {})
 
 -- TODO: Look / Wait for native way
 vim.cmd [[command! -range=% FormatJSON <line1>,<line2>!jq "."]]
+
+-- `ctrl + n` for NERDTree
+vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTreeToggle<CR>', {noremap = true, silent = true})
+
+-- make `jj` as `esc`
+vim.api.nvim_set_keymap('i', 'jj', '<Esc>', {noremap = true, silent = true})
+
+-- yank to OSX clipboard
+vim.cmd('set clipboard=unnamed')
