@@ -59,7 +59,6 @@ require("packer").startup(function()
   }
 
   use { "voldikss/vim-translator" }
-  use { "lewis6991/spellsitter.nvim" }
 
   -- EXPERIMENTING
   use { 'beauwilliams/focus.nvim' }
@@ -87,10 +86,6 @@ require("nord").set()
 -----------------------------------------
 
 require("lualine").setup()
-
-require("spellsitter").setup {
-  enable = true
-}
 
 require("nvim-treesitter.configs").setup {
     -- A list of parser names, or "all"
