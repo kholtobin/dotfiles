@@ -34,7 +34,7 @@ sudo dnf group upgrade --with-optional Multimedia
 
 ### Clone and configure links
 ```sh
-git clone git@github.com:ivleonov/dotfiles.git ~/dotfiles
+git clone git@github.com:kholtobin/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow --verbose=2 alacritty bash neovim tmux vscode
 ```
