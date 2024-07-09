@@ -61,7 +61,6 @@ require("packer").startup(function()
   use { "voldikss/vim-translator" }
 
   -- EXPERIMENTING
-  use { 'beauwilliams/focus.nvim' }
   use { "phaazon/hop.nvim", branch = "v2" }
 
   -- Add NERDTree plugin
@@ -70,10 +69,6 @@ end)
 
 require("hop").setup({
   keys = "awersdfjiokvnucm"
-})
-
-require("focus").setup({
-  number = false
 })
 
 -- config colorscheme ------------------
@@ -175,3 +170,26 @@ vim.api.nvim_set_keymap('i', 'jj', '<Esc>', {noremap = true, silent = true})
 
 -- yank to OSX clipboard
 vim.cmd('set clipboard=unnamed')
+
+-- [[ Highlight on yank ]]
+local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = "*",
+})
+
+-- useless spaces
+vim.api.nvim_command('highlight RedundantSpaces ctermbg=red guibg=red')
+vim.api.nvim_command("autocmd InsertEnter * :match RedundantSpaces //")
+vim.api.nvim_command("autocmd InsertLeave * :match RedundantSpaces /\\s\\+$/")
+
+-- spell check
+vim.opt.spell = true
+vim.opt.spelllang = 'en'
+vim.api.nvim_command(":match RedundantSpaces /\\s\\+$/")
+
+-- copy file path
+vim.api.nvim_command("command! CopyPath let @+=expand('%:p')")
