@@ -192,4 +192,4 @@ vim.opt.spelllang = 'en'
 vim.api.nvim_command(":match RedundantSpaces /\\s\\+$/")
 
 -- copy file path
-vim.api.nvim_command("command! CopyPath let @+=expand('%:p')")
+vim.api.nvim_command("command! CopyPath let @+=expand('%')")
