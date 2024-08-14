@@ -3,7 +3,6 @@
   "catppuccin": { "branch": "main", "commit": "05206bbb6d500a339cd55a9486532c3871a4455e" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
-  "copilot.vim": { "branch": "release", "commit": "25f73977033c597d530c7ab0e211d99b60927d2d" },
   "fidget.nvim": { "branch": "main", "commit": "0ba1e16d07627532b6cae915cc992ecac249fb97" },
   "fzf": { "branch": "master", "commit": "c423c496a15b96cfc3c3fbd09135bcdc0c8e6b6e" },
   "fzf.vim": { "branch": "master", "commit": "6f28c8c7bb551161a0315a76488522204f39c1f4" },
