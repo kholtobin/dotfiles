@@ -30,7 +30,6 @@ local on_attach = function(_, bufnr)
 end
 
 local servers = {
-  standardrb = {},
   ruby_lsp = {},
   lua_ls = {
     Lua = {
@@ -39,7 +38,6 @@ local servers = {
     },
   },
   pylsp = {},
-  gopls = {}
 }
 
 require("neodev").setup()
