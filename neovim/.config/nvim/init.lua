@@ -1,4 +1,8 @@
 -- Settings
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.termguicolors = true
@@ -93,7 +97,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- `ctrl + n` for NERDTree
-vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTreeToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- make `jj` as `esc`
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>', {noremap = true, silent = true})

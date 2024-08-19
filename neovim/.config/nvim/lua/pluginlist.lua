@@ -122,4 +122,9 @@ return {
     end
   },
   { "lewis6991/gitsigns.nvim" },
+  { "nvim-tree/nvim-tree.lua",
+    config = function()
+      require('nvim-tree').setup {}
+    end
+  },
 }
